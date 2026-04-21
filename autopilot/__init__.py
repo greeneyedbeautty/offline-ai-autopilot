@@ -1,20 +1,18 @@
 """
-Offline AI Autopilot CLI
-
-Author: greeneyedbeautty
-Version: 0.2.0
-License: MIT
-Description: A command-line interface for the Offline AI Autopilot.
+🤖 Offline AI Autopilot CLI
+A powerful, privacy-first AI assistant for developers
 """
+
+__version__ = "0.1.0"
+__author__ = "Autopilot Contributors"
+__description__ = "Offline AI-Assisted Autopilot CLI - No internet required"
+__license__ = "MIT"
 
 import logging
 
-# Setup logging
-def setup_logging():
-    logging.basicConfig(level=logging.INFO,
-                        format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
-setup_logging()
+from .main import app
 
-# Exports
-__all__ = ['setup_logging']
+__all__ = ["app", "logger"]
